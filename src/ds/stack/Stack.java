@@ -12,16 +12,16 @@ package ds.stack;
 public class Stack {
 
     private int maxSize;
-    private long[] stackArray;
+    private char[] stackArray;
     private int top;
 
     public Stack(int maxSize) {
         this.maxSize = maxSize;
-        this.stackArray = new long[maxSize];
+        this.stackArray = new char[maxSize];
         this.top = -1;
     }
     
-    public void push(long j){
+    public void push(char j){
         if (this.isFull()) 
             System.out.println("Sorry, the stack is full");
         else {
@@ -30,10 +30,10 @@ public class Stack {
         }
     }
     
-    public long pop() {
+    public char pop() {
         if (this.isEmpty()) {
             System.out.println("Sorry, the stack is empty");
-            return -1;
+            return '0';
         }
         else {
             int old_top = top;
@@ -43,7 +43,7 @@ public class Stack {
         
     }
     
-    public long peak() {
+    public char peak() {
         return stackArray[top];
     }
     
