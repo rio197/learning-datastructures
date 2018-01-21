@@ -22,8 +22,12 @@ public class Stack {
     }
     
     public void push(long j){
-        top++;
-        stackArray[top] = j;
+        if (this.isFull()) 
+            System.out.println("Sorry, the stack is full");
+        else {
+            top++;
+            stackArray[top] = j;
+        }
     }
     
     public long pop() {
