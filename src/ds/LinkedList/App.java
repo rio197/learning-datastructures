@@ -39,7 +39,7 @@ public class App {
 
         while (currentNode != null) {
             length++;
-            currentNode = aNode.next;
+            currentNode = currentNode.next;
         }
         return length;
     }
