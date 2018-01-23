@@ -35,8 +35,11 @@ public class App {
     public static int listLength(Node aNode) {
         
         int length = 0;
-        while (aNode.next != null) {
+        Node currentNode = aNode;
+
+        while (currentNode != null) {
             length++;
+            currentNode = aNode.next;
         }
         return length;
     }
