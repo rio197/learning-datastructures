@@ -17,5 +17,12 @@ public class App {
         myQueue.insert(14);
         myQueue.insert(12);
         myQueue.insert(44);
+        myQueue.insert(99);
+        myQueue.insert(99);
+        myQueue.insert(99);
+        myQueue.insert(99);
+        myQueue.insert(999999
+        );
+        myQueue.view();
     }
 }
