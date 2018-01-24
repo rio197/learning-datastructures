@@ -9,12 +9,7 @@ package ds.singlylinkedlist;
  *
  * @author rio197
  */
-public class Node {
-    public int data;
-    public Node next;
+public class SinglyLinkedList {
     
-    public void displayNode() {
-        
-        System.out.println("{ " + data + " }");
-    }
+    private Node first;
 }
