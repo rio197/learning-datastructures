@@ -24,6 +24,8 @@ public class SinglyLinkedList {
     public void insertFirst(int data) {
         Node newNode = new Node();
         newNode.data = data;
+        if(isEmpty())
+            last = newNode;
         newNode.next = first;
         first = newNode;
         if (newNode.next == null)
@@ -53,7 +55,7 @@ public class SinglyLinkedList {
         }*/
         Node newNode = new Node();
         newNode.data = data;
-        last.next = newNode;
+        last.next = newNode; //Warning: this breaks the code if the list is empty
         last = newNode;
         //current.next = newNode;
     }
