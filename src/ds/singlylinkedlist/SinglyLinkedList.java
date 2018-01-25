@@ -12,6 +12,7 @@ package ds.singlylinkedlist;
 public class SinglyLinkedList {
     
     private Node first;
+    private Node last;
     
     public SinglyLinkedList() {
     }
@@ -25,6 +26,8 @@ public class SinglyLinkedList {
         newNode.data = data;
         newNode.next = first;
         first = newNode;
+        if (newNode.next == null)
+            last = newNode;
     }
     
     public Node deleteFirst() {
@@ -44,12 +47,14 @@ public class SinglyLinkedList {
     }
     
     public void insertLast(int data) {
-        Node current = first;
+        /*Node current = first;
         while (current.next != null) {
             current = current.next;
-        }
+        }*/
         Node newNode = new Node();
         newNode.data = data;
-        current.next = newNode;
+        last.next = newNode;
+        last = newNode;
+        //current.next = newNode;
     }
 }
