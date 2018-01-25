@@ -42,8 +42,9 @@ public class CircularLinkedList {
             first = newNode;
         } else {
             last.next = newNode;
-            last = newNode;
         }
+        
+        last = newNode;
     }
     
     public int deleteFirst() {

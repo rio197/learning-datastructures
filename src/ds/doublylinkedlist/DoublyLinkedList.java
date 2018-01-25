@@ -45,7 +45,8 @@ public class DoublyLinkedList {
         } else {
             last.next = newNode;
             newNode.previous = last;
-            last = newNode;
         }
+        
+        last = newNode;
     }
 }
