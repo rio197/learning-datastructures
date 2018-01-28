@@ -1,2 +1,2 @@
-# ds.stack
-ds.stack = Data Structure exercises
+# learning-datastructures
+learning-datastructures = Data Structure exercises
