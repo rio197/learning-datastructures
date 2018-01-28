@@ -102,4 +102,30 @@ public class DoublyLinkedList {
         
         return true;
     }
+    
+    public Node deleteKey (int key) {
+        Node current = first;
+        
+        while (current.data != key) {
+            current = current.next;
+            if (current == null) {
+                return null;
+            }
+        }
+
+        if (current == first){
+            first = current.next;
+        } else {
+            current.previous.next = current.next;
+        }
+        
+        if (current == last){
+            last = current.previous;
+            current.previous.next = null;
+        } else {
+            current.next.previous = current.previous;
+        }
+        
+        return current;
+    }
 }
